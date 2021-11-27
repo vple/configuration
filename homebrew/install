@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Homebrew
+# https://brew.sh/
+
+set -e
+
+if test ! $(which brew)
+then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  # Add to $PATH.
+  # This command comes from the output of the brew install script.
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+fi
