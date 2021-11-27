@@ -1,0 +1,38 @@
+#!/bin/bash
+
+set -e
+
+VERBOSE=0
+
+### OPT PARSING ###
+
+while getopts "v" OPTION
+do
+  case $OPTION in
+    v) VERBOSE=1 ;;
+  esac
+done
+
+### UTILITY FUNCTIONS ###
+
+has() {
+  return $(type "$1" > /dev/null 2&> 1)
+}
+
+log() {
+  if [[ "$VERBOSE" -eq 1 ]]; then
+    echo "$@"
+  fi
+}
+
+### INSTALLATIONS ###
+
+# Homebrew
+# https://brew.sh/
+
+if ! has brew; then
+  log "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+log "Done!"
