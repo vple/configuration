@@ -29,4 +29,8 @@ done
 
 source "$GIT_ROOT/homebrew/install"
 
+### CONFIGURATIONS ###
+
+source "$GIT_ROOT/git/configure"
+
 log "Done!"

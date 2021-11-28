@@ -1,0 +1,24 @@
+#!/bin/sh
+
+configure_author() {
+  if ! $(git config --global user.name)
+  then
+    echo "[Global] What is your git author name?"
+    read -e git_author_name
+
+    log 'git config --global user.name "$git_author_name"'
+    git config --global user.name "$git_author_name"
+  fi
+
+
+  if ! $(git config --global user.email)
+  then
+    echo "[Global] What is your git author email?"
+    read -e git_author_email
+
+    log 'git config --global user.email "$git_author_email"'
+    git config --global user.email "$git_author_email"
+  fi
+}
+
+configure_author
