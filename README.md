@@ -30,6 +30,12 @@ Notable topics include:
 
 - `apps`, for applications including browsers, text editors, etc.
 
+## Future Items
+
+- I use Jetbrains Toolbox, but there is no CLI for Toolbox to install IntelliJ, etc.
+  This means that Jetbrains apps must be installed manually (or you don't use Toolbox).  
+  See also: https://youtrack.jetbrains.com/issue/TBX-653
+
 ## Resources
 
 See other projects for inspiration/config options:
