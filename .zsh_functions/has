@@ -1,0 +1,5 @@
+#!/bin/sh
+
+has() {
+  return $(type "$1" > /dev/null 2> /dev/null)
+}

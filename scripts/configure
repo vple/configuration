@@ -1,8 +1,18 @@
-#!/bin/bash
+#!/bin/zsh
 
 set -e
 
+### VARS ###
+
+GIT_ROOT=$(git rev-parse --show-toplevel)
 VERBOSE=0
+
+### AUTOLOAD ###
+
+fpath=( "$GIT_ROOT/.zsh_functions" "${fpath[@]}" )
+autoload -Uz has
+autoload -Uz log
+autoload -Uz link_file
 
 ### OPT PARSING ###
 
@@ -15,24 +25,8 @@ done
 
 ### UTILITY FUNCTIONS ###
 
-has() {
-  return $(type "$1" > /dev/null 2&> 1)
-}
-
-log() {
-  if [[ "$VERBOSE" -eq 1 ]]; then
-    echo "$@"
-  fi
-}
-
 ### INSTALLATIONS ###
 
-# Homebrew
-# https://brew.sh/
-
-if ! has brew; then
-  log "Installing Homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
+source "$GIT_ROOT/homebrew/install"
 
 log "Done!"
