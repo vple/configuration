@@ -1,0 +1,14 @@
+cask_args appdir: "/Applications", require_sha: true
+
+### Browsers ###
+cask "google-chrome", args: { require_sha: false }
+cask "firefox"
+
+### Editors ###
+cask "atom"
+
+### Software Engineering ###
+cask "jetbrains-toolbox"
+
+### Miscellaneous ###
+cask "spotify", args: { require_sha: false }

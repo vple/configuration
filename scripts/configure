@@ -33,9 +33,11 @@ done
 source "$GIT_ROOT/homebrew/install"
 
 brew bundle --file "$GIT_ROOT/git/Brewfile"
+brew bundle --file "$GIT_ROOT/apps/Brewfile"
 
 ### CONFIGURATIONS ###
 
+source "$GIT_ROOT/macos/configure"
 source "$GIT_ROOT/git/configure"
 
 log "Done!"
