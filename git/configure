@@ -22,3 +22,4 @@ configure_author() {
 }
 
 configure_author
+source "$GIT_ROOT/git/gitfu"

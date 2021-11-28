@@ -34,6 +34,7 @@ source "$GIT_ROOT/homebrew/install"
 
 brew bundle -q --file "$GIT_ROOT/git/Brewfile"
 brew bundle -q --file "$GIT_ROOT/apps/Brewfile"
+brew bundle -q --file "$GIT_ROOT/cli/Brewfile"
 
 ### CONFIGURATIONS ###
 
