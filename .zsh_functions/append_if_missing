@@ -4,7 +4,7 @@
 #   $3 an optional prefix, to be appended on the preceding line
 append_if_missing() {
   if grep -qxF "$1" "$2" ; then
-    exit 0
+    return 0
   fi
 
   if [ ! -z "$3" ]; then

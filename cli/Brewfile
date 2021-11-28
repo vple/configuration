@@ -1,4 +1,5 @@
 ### grep ###
 
+brew "gnu-sed"
 # https://github.com/ggreer/the_silver_searcher
 brew "the_silver_searcher"
