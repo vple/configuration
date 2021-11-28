@@ -1,0 +1,14 @@
+# Appends a string to a file, if that string is not already a line in the file.
+#   $1 the string
+#   $2 the file
+#   $3 an optional prefix, to be appended on the preceding line
+append_if_missing() {
+  if grep -qxF "$1" "$2" ; then
+    exit 0
+  fi
+
+  if [ ! -z "$3" ]; then
+    echo "$3" >> "$2"
+  fi
+  echo "$1" >> "$2"
+}

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+append_if_missing "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" ~/.zshrc "\n# Set theme to powerlevel10k."

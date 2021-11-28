@@ -13,9 +13,10 @@ VERBOSE=0
 ### AUTOLOAD ###
 
 fpath=( "$GIT_ROOT/.zsh_functions" "${fpath[@]}" )
+autoload -Uz append_if_missing
 autoload -Uz has
-autoload -Uz log
 autoload -Uz link_file
+autoload -Uz log
 
 ### OPT PARSING ###
 
@@ -33,14 +34,16 @@ done
 source "$GIT_ROOT/homebrew/install"
 source "$GIT_ROOT/zsh/install"
 
-brew bundle -q --file "$GIT_ROOT/git/Brewfile"
 brew bundle -q --file "$GIT_ROOT/apps/Brewfile"
 brew bundle -q --file "$GIT_ROOT/cli/Brewfile"
+brew bundle -q --file "$GIT_ROOT/git/Brewfile"
+brew bundle -q --file "$GIT_ROOT/zsh/Brewfile"
 
 ### CONFIGURATIONS ###
 
 source "$GIT_ROOT/macos/configure"
 source "$GIT_ROOT/git/configure"
+source "$GIT_ROOT/zsh/configure"
 
 ### UPDATE ###
 
