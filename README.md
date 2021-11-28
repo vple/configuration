@@ -26,9 +26,11 @@ Within those directories, you will generally find:
 
 You can add/edit/delete these as you need.
 
-Notable topics include:
+Things you will likely want to configure:
 
 - `apps`, for applications including browsers, text editors, etc.
+- `cli` for any CLI tools that you want.
+- `zsh` for Oh My Zsh plugins.
 
 ## Future Items
 
