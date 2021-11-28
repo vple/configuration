@@ -31,6 +31,7 @@ done
 ### INSTALLATIONS ###
 
 source "$GIT_ROOT/homebrew/install"
+source "$GIT_ROOT/zsh/install"
 
 brew bundle -q --file "$GIT_ROOT/git/Brewfile"
 brew bundle -q --file "$GIT_ROOT/apps/Brewfile"
