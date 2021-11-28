@@ -1,0 +1,7 @@
+# Git Brewfile
+
+# Git Credential Manager
+# https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git
+# https://github.com/GitCredentialManager/git-credential-manager
+tap "microsoft/git"
+cask "git-credential-manager-core"

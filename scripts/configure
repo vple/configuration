@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# FUTURE:
+#   - Programmatically find installs, configurations, etc. instead of doing everything directly.
+
 set -e
 
 ### VARS ###
@@ -28,6 +31,8 @@ done
 ### INSTALLATIONS ###
 
 source "$GIT_ROOT/homebrew/install"
+
+brew bundle --file "$GIT_ROOT/git/Brewfile"
 
 ### CONFIGURATIONS ###
 
