@@ -1,0 +1,3 @@
+#!/bin/sh
+
+append_if_missing ". /opt/homebrew/opt/asdf/libexec/asdf.sh" ~/.zshrc "\n# asdf"
