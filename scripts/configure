@@ -15,6 +15,7 @@ VERBOSE=0
 fpath=( "$GIT_ROOT/.zsh_functions" "${fpath[@]}" )
 autoload -Uz append_if_missing
 autoload -Uz has
+autoload -Uz install_dmg
 autoload -Uz link_file
 autoload -Uz log
 
@@ -31,8 +32,11 @@ done
 
 ### INSTALLATIONS ###
 
+# Install first.
 source "$GIT_ROOT/homebrew/install"
 source "$GIT_ROOT/zsh/install"
+
+source "$GIT_ROOT/apps/install"
 
 brew bundle -q --file "$GIT_ROOT/apps/Brewfile"
 brew bundle -q --file "$GIT_ROOT/cli/Brewfile"

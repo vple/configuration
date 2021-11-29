@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Installs a DMG.
+#   $1 URI to the DMG
+#   $2 Where the application should be placed
+install_dmg() {
+  app_name=$(basename -s ".dmg" "${1}")
+
+  if test -e "/Applications/$app_name.app"; then
+    log "$app_name is already installed, skipping."
+    return 0
+  fi
+
+  install_path="${2:-/Applications}"
+
+  hdiutil attach -nobrowse "$1"
+
+  log "Installing $app_name, this could take a moment..."
+  if test -e "/Volumes/$app_name/$app_name.app"; then
+    cp -r "/Volumes/$app_name/$app_name.app" "$install_path"
+  elif test -e "/Volumes/$app_name/$app_name.pkg"; then
+    installer -package "/Volumes/$app_name/$app_name.pkg" -target "$install_path"
+  fi
+
+  log "$app_name installed!"
+  hdiutil detach "/Volumes/$app_name"
+}

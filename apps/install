@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Roam
+install_dmg "https://download.wonder.inc/Roam/2ebc1c379db669c04b9e912af57cd287/latest/darwin/x64/Roam.dmg"
