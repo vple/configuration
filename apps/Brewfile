@@ -4,10 +4,11 @@ cask_args appdir: "/Applications", require_sha: true
 cask "google-chrome", args: { require_sha: false }
 cask "firefox"
 
-### Messaging ###
+### Messaging & Communications ###
 cask "discord"
 cask "signal"
 cask "slack"
+cask "zoom"
 
 ### Editors ###
 cask "atom"
