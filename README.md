@@ -6,6 +6,9 @@ Intended to (hopefully) install and configure things cleanly, from either a clea
 This is only tested on my machine (MacBook Pro (16-inch, 2021), M1 Pro).
 There are no plans to try to support other setups.
 
+This is based on various other dotfiles repositories.
+The concept is described [here](https://www.atlassian.com/git/tutorials/dotfiles).
+
 ## Usage
 
 ```shell
@@ -37,6 +40,7 @@ Things you will likely want to configure:
 - I use Jetbrains Toolbox, but there is no CLI for Toolbox to install IntelliJ, etc.
   This means that Jetbrains apps must be installed manually (or you don't use Toolbox).  
   See also: https://youtrack.jetbrains.com/issue/TBX-653
+- Fully manage dotfiles.
 
 ## Resources
 
