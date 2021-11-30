@@ -8,6 +8,7 @@ append_if_missing "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-t
 ohmyzsh_plugins=(
   ag
   git
+  gitignore
 )
 
 # Set plugins in ~/.zshrc
