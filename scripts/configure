@@ -30,11 +30,23 @@ done
 
 ### UTILITY FUNCTIONS ###
 
+install_dotfiles () {
+  log 'Symlinking dotfiles...'
+
+  for src in $(find -H "$GIT_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
+  do
+    dst="$HOME/.$(basename "${src%.*}")"
+    link_file "$src" "$dst"
+  done
+}
+
 ### INSTALLATIONS ###
 
 # Install first.
 source "$GIT_ROOT/homebrew/install"
 source "$GIT_ROOT/zsh/install"
+
+install_dotfiles
 
 source "$GIT_ROOT/apps/install"
 
