@@ -57,10 +57,8 @@ brew bundle -q --file "$GIT_ROOT/zsh/Brewfile"
 
 ### CONFIGURATIONS ###
 
-source "$GIT_ROOT/cli/configure"
 source "$GIT_ROOT/macos/configure"
 source "$GIT_ROOT/git/configure"
-source "$GIT_ROOT/zsh/configure"
 
 ### UPDATE ###
 
