@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# If there is no asdf.sh line, assume we just installed it and need to do the post install.
+if ! $(grep -q "asdf.sh" ~/.zshrc); then
+  log "Configuring asdf in ~/.zshrc..."
+  echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
+fi
