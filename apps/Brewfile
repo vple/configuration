@@ -15,6 +15,7 @@ cask "atom"
 
 ### Software Engineering ###
 cask "jetbrains-toolbox"
+cask "sequel-ace"
 
 ### Miscellaneous ###
 cask "spotify", args: { require_sha: false }
