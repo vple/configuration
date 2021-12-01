@@ -115,3 +115,9 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+
+if [[ -f /Users/vple/wonder/wonder-aliases.sh ]]; then
+  . /Users/vple/wonder/wonder-aliases.sh
+fi
+
