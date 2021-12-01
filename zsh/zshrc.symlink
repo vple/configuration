@@ -115,5 +115,3 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
