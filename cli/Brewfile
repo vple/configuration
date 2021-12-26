@@ -8,4 +8,6 @@ brew "gnu-sed"
 brew "mysql"
 # https://github.com/ggreer/the_silver_searcher
 brew "the_silver_searcher"
+# https://tilt.dev/
+brew "tilt"
 brew "tree"
