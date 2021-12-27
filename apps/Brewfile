@@ -14,6 +14,8 @@ cask "zoom"
 cask "atom"
 
 ### Software Engineering ###
+# Docker Desktop. Install Docker CLI on first open.
+cask "docker"
 cask "insomnia"
 cask "jetbrains-toolbox"
 cask "sequel-ace"
