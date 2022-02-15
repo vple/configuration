@@ -12,6 +12,7 @@ cask "zoom"
 
 ### Editors ###
 cask "atom"
+cask "obsidian"
 
 ### Software Engineering ###
 # Docker Desktop. Install Docker CLI on first open.
