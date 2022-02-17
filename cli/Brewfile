@@ -5,6 +5,7 @@ brew "pnpm"
 # CLI Tools
 
 brew "gnu-sed"
+brew "jq"
 brew "mysql"
 # https://github.com/ggreer/the_silver_searcher
 brew "the_silver_searcher"
