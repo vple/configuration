@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# If there is no jenv line, assume we just installed it and need to do the post install.
+if ! $(grep -q "jenv" ~/.zshrc); then
+  log "Configuring jenv in ~/.zshrc..."
+  echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+  echo 'eval "$(jenv init -)"' >> ~/.zshrc
+fi
+
+jenv enable-plugin export >> /dev/null

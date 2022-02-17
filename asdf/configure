@@ -6,4 +6,8 @@ if ! $(grep -q "asdf.sh" ~/.zshrc); then
   echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
 fi
 
+# Plugins
+# TODO: Don't try to reinstall plugins.
+asdf plugin add java https://github.com/halcyon/asdf-java.git
+
 asdf reshim nodejs

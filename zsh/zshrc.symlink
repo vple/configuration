@@ -121,3 +121,5 @@ if [[ -f /Users/vple/wonder/wonder-aliases.sh ]]; then
   . /Users/vple/wonder/wonder-aliases.sh
 fi
 
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"

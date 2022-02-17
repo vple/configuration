@@ -55,6 +55,7 @@ brew bundle -q --file "$GIT_ROOT/asdf/Brewfile"
 brew bundle -q --file "$GIT_ROOT/cli/Brewfile"
 brew bundle -q --file "$GIT_ROOT/git/Brewfile"
 brew bundle -q --file "$GIT_ROOT/zsh/Brewfile"
+brew bundle -q --file "$GIT_ROOT/java/Brewfile"
 
 ### CONFIGURATIONS ###
 
@@ -62,6 +63,7 @@ source "$GIT_ROOT/asdf/configure"
 source "$GIT_ROOT/cli/configure"
 source "$GIT_ROOT/macos/configure"
 source "$GIT_ROOT/git/configure"
+source "$GIT_ROOT/java/configure"
 
 ### UPDATE ###
 
