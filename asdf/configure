@@ -9,5 +9,6 @@ fi
 # Plugins
 # TODO: Don't try to reinstall plugins.
 asdf plugin add java https://github.com/halcyon/asdf-java.git
+asdf plugin add python
 
 asdf reshim nodejs
