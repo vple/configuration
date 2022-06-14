@@ -129,3 +129,11 @@ fixaudio () {
   sudo rm /Library/Preferences/Audio/com.apple.audio.SystemSettings.plist
   sudo killall coreaudiod
 }
+
+killport () {
+  kill $(lsof -i :$1 | awk '{if(NR>1)print $2}')
+}
+killroam () {
+  KILLPORT=$(functions killport); cat ~/wonder/ports.json | awk '{print substr($2, 1, length($2)-1)}' | gsed 's/[^0-9]*//g' | sed '/^$/d' | xargs -I{} zsh -c "eval $KILLPORT; killport {}"
+}
+
