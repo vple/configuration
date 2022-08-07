@@ -137,3 +137,6 @@ killroam () {
   KILLPORT=$(functions killport); cat ~/wonder/ports.json | awk '{print substr($2, 1, length($2)-1)}' | gsed 's/[^0-9]*//g' | sed '/^$/d' | xargs -I{} zsh -c "eval $KILLPORT; killport {}"
 }
 
+# https://stackoverflow.com/questions/19986214/setting-android-home-enviromental-variable-on-mac-os-x
+# Installed via Android Studio.
+export ANDROID_HOME=$HOME/Library/Android/sdk
