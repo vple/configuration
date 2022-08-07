@@ -8,3 +8,5 @@ if ! $(grep -q "jenv" ~/.zshrc); then
 fi
 
 jenv enable-plugin export >> /dev/null
+jenv enable-plugin maven >> /dev/null
+jenv exec mvn -version
