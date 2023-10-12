@@ -140,3 +140,5 @@ killroam () {
 # https://stackoverflow.com/questions/19986214/setting-android-home-enviromental-variable-on-mac-os-x
 # Installed via Android Studio.
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export WONDER_ROOT=/Users/vple/wonder
+export ROAM_LOCAL_PREFIX=vple@ro.am
