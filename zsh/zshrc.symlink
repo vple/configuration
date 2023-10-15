@@ -142,3 +142,10 @@ killroam () {
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export WONDER_ROOT=/Users/vple/wonder
 export ROAM_LOCAL_PREFIX=vple@ro.am
+
+if [[ -d /Users/vple/wonder/scripts ]]; then
+  export PATH=/Users/vple/wonder/scripts:$PATH
+fi
+
+export WONDER_ROOT=/Users/vple/wonder
+export ROAM_LOCAL_PREFIX=vple@ro.am
